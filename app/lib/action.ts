@@ -46,21 +46,21 @@ export async function handleRefresh() {
 export async function handleLogin(userId:string, accessToken:string, refresshToken:string){
     cookies().set('session_userid',userId,{
         httpOnly:true,
-        secure:process.env.NODE_ENV === 'production',
+        secure:false, //process.env.NODE_ENV === 'production',
         maxAge:60*60*24*7, //One Week
         path:'/'
     });
 
     cookies().set('session_access_token',accessToken,{
         httpOnly:true,
-        secure:process.env.NODE_ENV === 'production',
+        secure:false, //process.env.NODE_ENV === 'production',
         maxAge:60*60, //60 Minutes
         path:'/'
     });
 
     cookies().set('session_refresh_token',refresshToken,{
         httpOnly:true,
-        secure:process.env.NODE_ENV === 'production',
+        secure:false, //process.env.NODE_ENV === 'production',
         maxAge:60*60*24*7, //One Week
         path:'/'
     });
