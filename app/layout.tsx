@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Content, Inter } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/navbar/Navbar";
 import LoginModal from "./components/modals/LoginModal";
